@@ -1,0 +1,36 @@
+.background{
+    background-image: url('img/mountaincopy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: auto;
+    min-height: 70vh;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .background-filter{
+    position: absolute;
+    opacity: 0.3;
+    min-height: 70vh;
+    width: 100%;
+    z-index: 2;
+    background: rgb(119,39,238);
+    background: linear-gradient(112deg, rgba(119,39,238,1) 5%, rgba(217,159,136,1) 51%, rgba(34,229,244,1) 88%);
+  }
+
+  .calendar{
+    position: relative;
+    top: -200px;
+    z-index: 10;
+    border: 2px solid $white;
+    margin: 0 auto;
+  }
+
+  .background-title{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+  }

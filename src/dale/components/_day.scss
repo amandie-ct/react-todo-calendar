@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+.day{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $base-padding;
+    border: $base-thickness solid rgb(194, 194, 194);
+    box-shadow: $base-box-shadow;
+    border-radius: none;
+    min-width: 12%;
+
+    
+    .day-title{
+        font-size: $font-size-xxl;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .day-body{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: $base-thickness;
+    }
+
+}

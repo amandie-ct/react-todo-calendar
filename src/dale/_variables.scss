@@ -1,0 +1,35 @@
+// cores do tema
+$white: #fff;
+$black: #000;
+$gray: #808080;
+$pink: #d99f88;
+$purple: #7727ee;
+$blue: #22e5f4;
+
+
+// cores pra misturar
+$colors: (
+    "white": #fff,
+    "black": #000,
+    "gray": #808080,
+    "pink": #d99f88,
+    "purple": #7727ee,
+    "blue": #22e5f4
+);
+
+// espaçamento
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// bordas
+$base-thickness: 1px;
+$base-border-radius: 20px;
+$base-box-shadow: 0 3px 12px rgb(0 0 0 / 0.3);
+
+// fonte
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+$font-size-4l: $base-font-size * 4;
