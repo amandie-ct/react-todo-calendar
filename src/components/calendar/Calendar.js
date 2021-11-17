@@ -1,7 +1,8 @@
 import moment from 'moment';
 import {useState, useEffect} from 'react';
 import 'moment/locale/pt-br';
-import buildCalendar from './CalendarFunctions';
+import buildCalendar from './BuildCalendar';
+import Weekdays from './Weekdays';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,49 +16,33 @@ const Calendar = () => {
     // mês atual
     const monthName = today.clone().format('MMMM');
 
-    // lógica do calendário
-
-    // nome dos dias da semana 
-    let weekdays = [];
-    for(let i = 0; i < 7; i++){
-        weekdays.push(
-            firstWeekDay.clone().add(i, 'day')
-        );
-    }
 
     useEffect(() => {
-        setCalendar(buildCalendar())
+        setCalendar(buildCalendar(today))
     }, [today]);
 
     return ( 
         <div className="bg-white pt-2 pb-2">
             <div className="subtitle text-gray-dark-6">{monthName}</div>
             <hr/>
-            <div className="row justify-space-around bg-gray-light-9">
-                {weekdays.map((day) => {
-                    return <div>
-                        <div className="day-title p-1 text-gray-dark-6"
-                        onClick={() => setToday(day)}>
-                            <div>{day.format('dddd')}</div>
-                    </div>
-                        </div>})}
-            </div>
+            <Weekdays today={today}/>
             <hr/>
 
             {calendar.map((week) => {
                 return <div className="row justify-space-around">
                     {week.map((day) => {
-                        // dias do calendário
-                        return <div className="day o-5 bg-white">
-                            <h1 className="day-title text-gray-dark-6">{day.format("D")}</h1>
-                            <div className="day-body">
+
+                    return <div className={ day.isBefore(today) ? "past" : "day"}>
+                        <h1 className="day-title text-gray-dark-6">{day.format("D")}</h1>
+                        <div className="day-body">
+                            {day.isBefore(today) ? "" :
                                 <button className="btn-add text-purple-light-6">
                                     <FontAwesomeIcon icon={faPlusCircle}/>
-                                </button>
-                            </div>
+                                </button>}
                         </div>
-                    })}
-                </div>})}
+                    </div>
+                })}
+            </div>})}
         </div>
      );
 }

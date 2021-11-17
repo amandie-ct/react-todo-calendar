@@ -1435,25 +1435,6 @@ img {
   background-color: #031718;
 }
 
-.card {
-  display: block;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-}
-.card .card-title {
-  font-size: 1.5rem;
-  padding-bottom: 0.75rem;
-  font-weight: bold;
-}
-.card .card-body {
-  font-size: 1rem;
-}
-.card .card-body a {
-  text-decoration: underline;
-}
-
 .btn {
   text-decoration: none;
   cursor: pointer;
@@ -1720,7 +1701,7 @@ img {
   background-color: #22e5f4;
 }
 
-.day {
+.past, .day {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1731,16 +1712,35 @@ img {
   border-radius: none;
   min-width: 12%;
 }
-.day .day-title {
+
+.day {
+  background-color: #fff;
+  color: #333333;
+}
+
+.day-title {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
 }
-.day .day-body {
+
+.day-body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1px;
+}
+
+.week {
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.past {
+  background-color: #e6e6e6;
+  color: #404040;
 }
 
 .top-title {

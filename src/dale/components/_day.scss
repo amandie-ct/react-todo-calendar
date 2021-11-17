@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-.day{
+%day-layout{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,19 +10,36 @@
     box-shadow: $base-box-shadow;
     border-radius: none;
     min-width: 12%;
+}
 
-    
-    .day-title{
-        font-size: $font-size-xxl;
-        font-weight: bold;
-        text-align: center;
-    }
+.day{
+    @extend %day-layout;
+    background-color: $white;
+    color: mix(black, $gray, 6 * 10);
+}
 
-    .day-body{
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: $base-thickness;
-    }
+.day-title{
+    font-size: $font-size-xxl;
+    font-weight: bold;
+    text-align: center;
+}
 
+.day-body{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $base-thickness;
+}
+
+.week{
+    display: flex;
+    font-size: $base-font-size;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.past{
+    @extend %day-layout;
+    background-color: mix(white, $gray, 8 * 10);
+    color: mix(black, $gray, 5 * 10);
 }

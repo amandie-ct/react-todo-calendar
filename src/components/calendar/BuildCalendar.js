@@ -1,4 +1,4 @@
-const buildCalendar = () => {
+const buildCalendar = (today) => {
 
     // primeiro dia da primeira semana mostrada no calendário atual
     const firstWeekDay = today.clone().startOf('month').startOf('week');
@@ -9,7 +9,13 @@ const buildCalendar = () => {
     // dia anterior ao primeiro dia da primeira semana mostrada no calendário atual
     const dayBefore = firstWeekDay.clone().subtract(1, 'day');
 
-    // inicializando 
+    // 
+    // 
+    // if day.isBefore(today) {
+        // day.classList.add('bg-gray')
+    //}
+
+    // inicializando
     const calendar = [];
 
     // enquanto o dia for anterior ao último dia mostrado no calendário
@@ -24,10 +30,9 @@ const buildCalendar = () => {
                 return dayBefore.add(1, 'day').clone();
             })
         )};
-    
-    return (
 
-    );
+    
+    return calendar;
 }
  
-export default function buildCalendar(value);
+export default buildCalendar;
