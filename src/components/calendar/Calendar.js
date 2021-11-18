@@ -22,28 +22,31 @@ const Calendar = () => {
     }, [today]);
 
     return ( 
-        <div className="bg-white pt-2 pb-2">
-            <div className="subtitle text-gray-dark-6">{monthName}</div>
+        <main className="bg-white pt-2">
+            <section className="subtitle text-gray-dark-6">{monthName}</section>
             <hr/>
             <Weekdays today={today}/>
             <hr/>
 
-            {calendar.map((week) => {
-                return <div className="row justify-space-around">
-                    {week.map((day) => {
+            <section className="container">
+                {calendar.map((week) => {
+                    return <div className="row justify-space-around">
+                        {week.map((day) => {
 
-                    return <div className={ day.isBefore(today) ? "past" : "day"}>
-                        <h1 className="day-title text-gray-dark-6">{day.format("D")}</h1>
-                        <div className="day-body">
-                            {day.isBefore(today) ? "" :
-                                <button className="btn-add text-purple-light-6">
-                                    <FontAwesomeIcon icon={faPlusCircle}/>
-                                </button>}
-                        </div>
+                            return <div className={day.isBefore(today) ? "past" : "day"}>
+                                <h1 className="day-title text-gray-dark-6">{day.format("D")}</h1>
+                                <div className="day-body">
+                                    {day.isBefore(today) ? "" :
+                                        <button className="btn-add text-purple-light-6">
+                                            <FontAwesomeIcon icon={faPlusCircle} />
+                                        </button>}
+                                </div>
+                            </div>
+                        })}
                     </div>
                 })}
-            </div>})}
-        </div>
+            </section>
+        </main>
      );
 }
  

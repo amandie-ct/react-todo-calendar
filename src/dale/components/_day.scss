@@ -19,7 +19,7 @@
 }
 
 .day-title{
-    font-size: $font-size-xxl;
+    font-size: $font-size-xl;
     font-weight: bold;
     text-align: center;
 }
@@ -36,10 +36,18 @@
     font-size: $base-font-size;
     justify-content: space-around;
     text-align: center;
+    background: $gray;
+    background: $gradient-light;
 }
 
 .past{
     @extend %day-layout;
     background-color: mix(white, $gray, 8 * 10);
-    color: mix(black, $gray, 5 * 10);
+    color: mix(black, $gray, 7 * 10);
+    padding-bottom: 3 * $base-padding;
+}
+
+.today{
+    @extend %day-layout;
+    background-color: mix(white, $blue, 7 * 10);
 }

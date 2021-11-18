@@ -15,7 +15,7 @@ function App() {
           <Route path="/calendar" element={<MainPage/>} />
         </Routes>
       </Router> */}
-
+      {/* <LandingPage/> */}
 
 
     </div>

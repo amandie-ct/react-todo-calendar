@@ -6,6 +6,9 @@ $pink: #d99f88;
 $purple: #7727ee;
 $blue: #22e5f4;
 
+// gradiente background
+$gradient: linear-gradient(112deg, rgba(119,39,238,1) 5%, rgba(217,159,136,1) 51%, rgba(34,229,244,1) 88%);
+$gradient-light: linear-gradient(112deg, rgba(119,39,238,0.3) 5%, rgba(217,159,136,0.5) 51%, rgba(34,229,244,0.3) 88%);
 
 // cores pra misturar
 $colors: (
@@ -14,7 +17,7 @@ $colors: (
     "gray": #808080,
     "pink": #d99f88,
     "purple": #7727ee,
-    "blue": #22e5f4
+    "blue": #22e5f4,
 );
 
 // espaçamento

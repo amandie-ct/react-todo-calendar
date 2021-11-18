@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+.input{
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: $base-thickness solid $gray;
+    padding: $base-padding;
+    margin-bottom: $base-margin * 2;
+    font-size: $base-font-size;
+    color: mix(black, $gray, 4 * 10);
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.labels{
+    font-weight: bold;
+    margin-top: $base-margin;
+
+}

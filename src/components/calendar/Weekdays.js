@@ -12,7 +12,7 @@ for(let i = 0; i < 7; i++){
     )}
 
     return (
-        <div className="week bg-purple-light-7 p-1 text-gray-dark-6">
+        <div className="week p-1 text-gray-dark-6">
             {weekdays.map((day) => {
                 return <div> {day.format('dddd')} </div>})
         }

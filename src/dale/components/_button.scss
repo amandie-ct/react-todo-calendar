@@ -3,12 +3,27 @@
     cursor: pointer;
     display: inline-block;
     background-color: $bg-color;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .btn{
     @include btn;
     padding: $base-padding $base-padding * 2;
     border-radius: $base-border-radius;
+}
+
+.btn-form{
+    @include btn;
+    background: $purple;
+    background: $gradient;
+    padding: $base-padding;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    color: $white;
+    font-size: $base-font-size * 1.2;
+    text-shadow: 1px 1px 2px mix(black, $gray, 6 * 10);
+    margin: 0 10px;
 }
 
 .btn-add{
