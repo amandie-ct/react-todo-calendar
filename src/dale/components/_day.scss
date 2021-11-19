@@ -43,7 +43,7 @@
 .past{
     @extend %day-layout;
     background-color: mix(white, $gray, 8 * 10);
-    color: mix(black, $gray, 7 * 10);
+    color: mix(white, $gray, 9 * 10);
     padding-bottom: 3 * $base-padding;
 }
 

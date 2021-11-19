@@ -483,19 +483,28 @@ img {
   background: linear-gradient(112deg, #7727ee 5%, #d99f88 51%, #22e5f4 88%);
 }
 
-.form-background {
+.calendar-background, .form-background {
   margin: auto;
   background-color: #fff;
   height: auto;
-  width: 60vh;
-  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-background {
+  width: 60vh;
   border-radius: 2%;
   text-align: left;
   margin-top: 3rem;
+  padding: 3rem;
+}
+
+.calendar-background {
+  width: auto;
+  border-radius: 0.8%;
+  padding: 2.25rem;
 }
 
 .calendar {
@@ -1643,7 +1652,7 @@ img {
 
 .past {
   background-color: #e6e6e6;
-  color: #262626;
+  color: #f2f2f2;
   padding-bottom: 2.25rem;
 }
 
@@ -1673,12 +1682,14 @@ img {
 
 .footer {
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: linear-gradient(112deg, rgba(119, 39, 238, 0.3) 5%, rgba(217, 159, 136, 0.5) 51%, rgba(34, 229, 244, 0.3) 88%);
+  position: relative;
+  z-index: -1;
 }
 
 .input {

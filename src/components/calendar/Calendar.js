@@ -22,13 +22,13 @@ const Calendar = () => {
     }, [today]);
 
     return ( 
-        <main className="bg-white pt-2">
+        <main className="calendar-background">
             <section className="subtitle text-gray-dark-6">{monthName}</section>
             <hr/>
             <Weekdays today={today}/>
             <hr/>
 
-            <section className="container">
+            <section>
                 {calendar.map((week) => {
                     return <div className="row justify-space-around">
                         {week.map((day) => {
