@@ -6,6 +6,7 @@
     font-family: 'Poppins', 'sans-serif';
 }
 
+
 .btn{
     @include btn;
     padding: $base-padding $base-padding * 2;
@@ -36,6 +37,31 @@
     &:hover{
         color: mix(white, $purple, 5 * 10);
     }
+}
+
+@mixin todo-button ($bg-color: $gradient){
+    border: none;
+    outline: none;
+    padding: $base-padding;
+    border-radius: 10px;
+    background-color: $bg-color;
+    box-shadow: $base-box-shadow;
+}
+
+.todo-btn {
+    @include btn;
+    @include todo-button;
+}
+
+.del-btn{
+    @include btn;
+    @include todo-button($del);
+    color: $white;
+}
+
+.check-btn{
+    @include btn;
+    @include todo-button($checked);
 }
 
 @each $key, $val in $colors {

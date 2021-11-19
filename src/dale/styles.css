@@ -483,7 +483,7 @@ img {
   background: linear-gradient(112deg, #7727ee 5%, #d99f88 51%, #22e5f4 88%);
 }
 
-.calendar-background, .form-background {
+.todo-input-background, .calendar-background, .form-background {
   margin: auto;
   background-color: #fff;
   height: auto;
@@ -1500,6 +1500,49 @@ img {
   color: #bb93f7;
 }
 
+.todo-btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e2e2e2;
+  font-family: "Poppins", "sans-serif";
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background-color: linear-gradient(112deg, #7727ee 5%, #d99f88 51%, #22e5f4 88%);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.del-btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e2e2e2;
+  font-family: "Poppins", "sans-serif";
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background-color: #ff3333;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.check-btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e2e2e2;
+  font-family: "Poppins", "sans-serif";
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background-color: #d4ffb2;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
 .btn-white {
   text-decoration: none;
   cursor: pointer;
@@ -1708,6 +1751,52 @@ img {
 .labels {
   font-weight: bold;
   margin-top: 0.75rem;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.todo-columns {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: auto;
+}
+.todo-columns h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px 1px #808080;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.todo h2 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.todo p {
+  padding-bottom: 0.75rem;
+}
+.todo button {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.todo .btn-vsl {
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  background-color: #d4ffb2;
 }
 
 .p-0 {

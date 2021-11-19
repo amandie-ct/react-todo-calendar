@@ -1,0 +1,58 @@
+@use 'sass:math';
+
+.todo-input-background{
+    @extend %mould;
+  
+  }
+
+.todo-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.todo-columns{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+
+    h1{
+        font-size: $font-size-xl;
+        text-align: center;
+    }
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    padding: $base-padding $base-padding * 2;
+    margin-top: $base-margin * 2;
+    border: $base-thickness 1px $gray;
+    box-shadow: $base-box-shadow;
+    border-radius: 5px;
+    
+    h2 {
+        padding-top: $base-padding;
+        padding-bottom: $base-padding;  
+    }
+
+    p {
+        padding-bottom: $base-padding;
+    }
+
+    button{
+        margin-top: $base-margin;
+        margin-bottom: $base-margin;
+    }
+
+    .btn-vsl{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.done{
+    background-color: $checked;
+}
