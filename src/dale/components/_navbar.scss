@@ -2,17 +2,22 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     box-sizing: border-box;
 }
 
 .navbar {
     @extend %flex-layout;
-    padding: $base-padding $base-padding * 2;
-    box-shadow: $base-box-shadow;
+    padding: 0 $base-padding * 2;
+
 
     .site-title {
-        font-size: $font-size-lg;
+        font-size: $font-size-xl;   
+        font-weight: bold;
+        text-shadow: 1px 1px 2px mix(black, $gray, 6 * 10);
+        letter-spacing: 0.1em;
+        color: $white;
+        margin-top: $base-margin;
     }
     .container {
         @extend %flex-layout;

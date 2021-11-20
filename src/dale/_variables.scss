@@ -5,8 +5,10 @@ $gray: #808080;
 $pink: #d99f88;
 $purple: #7727ee;
 $blue: #22e5f4;
+$green: #03bb85;
 $del:  #ff3333;
 $checked: #d4ffb2;
+
 
 // gradiente background
 $gradient: linear-gradient(112deg, rgba(119,39,238,1) 5%, rgba(217,159,136,1) 51%, rgba(34,229,244,1) 88%);
@@ -23,6 +25,7 @@ $colors: (
 );
 
 // espaçamento
+$sm-padding: 0.25rem;
 $base-padding: 0.75rem;
 $base-margin: 0.75rem;
 

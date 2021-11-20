@@ -1,4 +1,4 @@
-.background {
+%background {
   background-image: url("img/mountaincopy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,6 +7,16 @@
   min-height: 60vh;
   position: relative;
   z-index: -1;
+}
+
+.background-calendar{
+  @extend %background;
+  height: 50vh;
+}
+
+.background-todos{
+  @extend %background;
+  height: 100vh;
 }
 
 .background-filter {

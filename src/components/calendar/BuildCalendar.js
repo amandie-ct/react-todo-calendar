@@ -9,11 +9,6 @@ const buildCalendar = (today) => {
     // dia anterior ao primeiro dia da primeira semana mostrada no calendário atual
     const dayBefore = firstWeekDay.clone().subtract(1, 'day');
 
-    // 
-    // 
-    // if day.isBefore(today) {
-        // day.classList.add('bg-gray')
-    //}
 
     // inicializando
     const calendar = [];

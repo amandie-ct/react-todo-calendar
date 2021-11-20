@@ -11,6 +11,10 @@
     font-size: $base-font-size;
     color: mix(black, $gray, 4 * 10);
     font-family: 'Poppins', 'sans-serif';
+
+    input{
+        background-color: $pink;
+    }
 }
 
 .labels{

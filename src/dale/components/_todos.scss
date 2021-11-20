@@ -1,7 +1,18 @@
 @use 'sass:math';
 
+%todo-background{
+    display: flex;
+    flex-direction: column;
+    padding: $base-padding $base-padding * 2;
+    margin-top: $base-margin * 2;
+    border: $base-thickness 1px $gray;
+    box-shadow: $base-box-shadow;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .todo-input-background{
-    @extend %mould;
+    @extend %todo-background;
   
   }
 
@@ -24,33 +35,39 @@
 }
 
 .todo {
-    display: flex;
-    flex-direction: column;
-    padding: $base-padding $base-padding * 2;
-    margin-top: $base-margin * 2;
-    border: $base-thickness 1px $gray;
-    box-shadow: $base-box-shadow;
-    border-radius: 5px;
+    @extend %todo-background;
     
     h2 {
         padding-top: $base-padding;
-        padding-bottom: $base-padding;  
+        padding-bottom: $sm-padding;
     }
 
     p {
-        padding-bottom: $base-padding;
+        padding-top: $base-padding;
+        padding-bottom: $sm-padding;
     }
 
-    button{
-        margin-top: $base-margin;
-        margin-bottom: $base-margin;
-    }
+}
 
-    .btn-vsl{
-        display: flex;
-        justify-content: space-between;
-    }
+%btn-container{
+    display: flex;
+    margin: $base-margin 0;
+}
 
+.btn-td{
+    @extend %btn-container;
+    justify-content: space-between;
+}
+
+.btn-td-input{
+    @extend %btn-container;
+    justify-content: flex-end;
+}
+
+.done-title{
+    @extend %btn-container;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .done{

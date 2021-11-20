@@ -3,7 +3,7 @@ import Calendar from "./Calendar";
 const MainPage = () => {
     return (
         <main>
-            <nav className="background">
+            <nav className="background-calendar">
                     <div className="background-title">
                         <h1 className="top-title">Todo list</h1>
                     </div>

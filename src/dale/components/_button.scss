@@ -39,13 +39,15 @@
     }
 }
 
-@mixin todo-button ($bg-color: $gradient){
+@mixin todo-button ($bg-color: $blue){
     border: none;
     outline: none;
-    padding: $base-padding;
+    padding: $sm-padding $base-padding;
     border-radius: 10px;
     background-color: $bg-color;
     box-shadow: $base-box-shadow;
+    color: $white;
+    font-size: $base-font-size;
 }
 
 .todo-btn {
@@ -56,21 +58,14 @@
 .del-btn{
     @include btn;
     @include todo-button($del);
-    color: $white;
 }
 
 .check-btn{
     @include btn;
-    @include todo-button($checked);
+    @include todo-button($green);
 }
 
-@each $key, $val in $colors {
-    .btn-#{$key} {
-        @include btn($val);
-        &:hover{
-            background-color: lighten($val, 5);
-        }
-        border: 0;
-    }
-
+.add-todo-btn{
+    @include btn;
+    @include todo-button;
 }

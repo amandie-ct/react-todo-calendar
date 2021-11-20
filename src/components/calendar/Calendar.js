@@ -5,6 +5,7 @@ import buildCalendar from './BuildCalendar';
 import Weekdays from './Weekdays';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Calendar = () => {
     moment.locale('pt-br');
@@ -37,9 +38,12 @@ const Calendar = () => {
                                 <h1 className="day-title text-gray-dark-6">{day.format("D")}</h1>
                                 <div className="day-body">
                                     {day.isBefore(today) ? "" :
+                                    <Link to="/todos">
                                         <button className="btn-add text-purple-light-6">
                                             <FontAwesomeIcon icon={faPlusCircle} />
-                                        </button>}
+                                        </button>
+                                    </Link>
+                                    }
                                 </div>
                             </div>
                         })}
