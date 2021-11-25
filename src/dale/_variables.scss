@@ -1,7 +1,8 @@
-// cores do tema
+// cores
 $white: #fff;
 $black: #000;
 $gray: #808080;
+$dark-gray: #3e3e3e;
 $pink: #d99f88;
 $purple: #7727ee;
 $blue: #22e5f4;
@@ -9,10 +10,17 @@ $green: #03bb85;
 $del:  #ff3333;
 $checked: #d4ffb2;
 
+// paleta de cores da imagem
+$ciano: #72BED5;
+$dark-green: #224D53;
+$rosy-brown: #BA8F86;
+$crimson: #90212A;
+$olive: #4C3E22;
+
 
 // gradiente background
 $gradient: linear-gradient(112deg, rgba(119,39,238,1) 5%, rgba(217,159,136,1) 51%, rgba(34,229,244,1) 88%);
-$gradient-light: linear-gradient(112deg, rgba(119,39,238,0.3) 5%, rgba(217,159,136,0.5) 51%, rgba(34,229,244,0.3) 88%);
+$gradient-light: linear-gradient(112deg, rgba(119,39,238,0.5) 5%, rgba(217,159,136,0.5) 51%, rgba(34,229,244,0.5) 88%);
 
 // cores pra misturar
 $colors: (

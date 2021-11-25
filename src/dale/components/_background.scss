@@ -1,25 +1,20 @@
-%background {
+.background-img {
   background-image: url("img/mountaincopy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  width: auto;
-  min-height: 60vh;
-  position: relative;
-  z-index: -1;
+  height: auto;
+  z-index: -5;
+  padding-top: $base-padding * 3;
 }
 
-.background-calendar{
-  @extend %background;
-  height: 50vh;
+.todo-background-filter{
+  backdrop-filter: blur(4px);
+  height: auto;
+  z-index: -4;
 }
 
-.background-todos{
-  @extend %background;
-  height: 100vh;
-}
-
-.background-filter {
+.background-landing {
   position: absolute;
   opacity: 0.8;
   min-height: 100vh;
@@ -30,13 +25,23 @@
 }
 
 %mould {
-  margin: auto;
   background-color: $white;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   box-shadow: $base-box-shadow;
+}
+
+.background-calendar-container{
+  @extend %mould;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: $sm-padding $sm-padding;
+  width: 100%;
+  border-radius: 5px;
+  margin: $base-margin * 2 0;
+
 }
 
 .form-background {
@@ -50,15 +55,16 @@
 
 .calendar-background {
   @extend %mould;
-  width: auto;
-  border-radius: 0.8%;
-  padding: $base-padding * 3;
+  width: 90%;
+  margin: $base-margin * 3 $base-margin;
+  font-family: 'Arvo', 'serif';
 }
+
 .calendar {
   position: relative;
   top: -200px;
   z-index: 5;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .background-title {

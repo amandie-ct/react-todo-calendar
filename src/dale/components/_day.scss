@@ -5,49 +5,57 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: $base-padding;
-    border: $base-thickness solid rgb(194, 194, 194);
     box-shadow: $base-box-shadow;
     border-radius: none;
     min-width: 12%;
+    padding: $base-padding * 2 $base-padding;
+    font-family: 'Outfit', sans-serif;
 }
 
 .day{
     @extend %day-layout;
     background-color: $white;
-    color: mix(black, $gray, 6 * 10);
+    color: $dark-gray;
+
+
+    &:hover{
+        background-color: mix(white, $dark-green, 7 * 10);
+        cursor: pointer;
+    }
 }
 
 .day-title{
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
     font-weight: bold;
     text-align: center;
 }
 
-.day-body{
+.dummy {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: $base-thickness;
 }
 
 .week{
     display: flex;
     font-size: $base-font-size;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
-    background: $gray;
-    background: $gradient-light;
+    background-color: mix(white, $dark-green, 7 * 10);
+    border-top: 1px dashed mix(white, $gray, 2 * 10);
+    border-bottom: 1px dashed mix(white, $gray, 2 * 10);
+    width: 100%;
+    padding: $sm-padding $base-padding;
+    box-sizing: border-box;
+}
+
+.day-of-week{
+    font-size: $base-font-size;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    color: $dark-gray;
 }
 
 .past{
     @extend %day-layout;
-    background-color: mix(white, $gray, 8 * 10);
-    color: mix(white, $gray, 9 * 10);
-    padding-bottom: 3 * $base-padding;
-}
-
-.today{
-    @extend %day-layout;
-    background-color: mix(white, $blue, 7 * 10);
+    background-color: mix(white, $rosy-brown, 8 * 10);
+    color: mix(white, $dark-gray, 2 * 10);
 }

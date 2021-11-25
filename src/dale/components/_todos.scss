@@ -8,11 +8,22 @@
     border: $base-thickness 1px $gray;
     box-shadow: $base-box-shadow;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: $base-margin $base-margin;
 }
 
 .todo-input-background{
     @extend %todo-background;
+
+    .todo-input-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        input{
+            background-color: transparent;
+        }
+    }
   
   }
 
@@ -27,11 +38,10 @@
     flex-direction: column;
     width: 30%;
     height: auto;
-
-    h1{
-        font-size: $font-size-xl;
-        text-align: center;
-    }
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    margin: $base-margin * 2 0;
+    box-shadow: $base-box-shadow;
 }
 
 .todo {
@@ -40,11 +50,12 @@
     h2 {
         padding-top: $base-padding;
         padding-bottom: $sm-padding;
+        font-size: $font-size-lg;
     }
 
     p {
-        padding-top: $base-padding;
         padding-bottom: $sm-padding;
+        font-size: $base-font-size;
     }
 
 }
@@ -68,8 +79,21 @@
     @extend %btn-container;
     align-items: center;
     justify-content: space-between;
+    color: mix($black, $olive, 7 * 10);
+
+    h2 {
+        padding-top: $base-padding;
+        padding-bottom: $sm-padding;
+        font-size: $font-size-lg;
+    }
+
+    p {
+        padding-top: $base-padding;
+        padding-bottom: $sm-padding;
+        font-size: $base-font-size;
+    }
 }
 
 .done{
-    background-color: $checked;
+    background-color: mix(white, $rosy-brown, 3 * 10);
 }

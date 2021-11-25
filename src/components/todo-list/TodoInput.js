@@ -5,26 +5,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const TodoInput = () => {
 
     return (
-            <section>
-                <div className="todo-input-background">
-                    <label for="todo-title" className="labels">Título (opcional)</label>
-                    <input type="text" id="todo-title" className="input"></input>
+        <main>
+            <section className="todo-input-background">
+                    <div className="todo-input-container">
+                        <label for="todo-title" className="labels">Título</label>
+                        <input type="text" id="todo-title" className="input" />
+                    </div>
 
-                    <label for="description" className="labels">Descrição</label>
-                    <input type="textarea" id="description"  className="input"></input>
-                
-                    <label for="time" className="labels">Hora</label>
-                    <input type="time" className="input"></input>
+                    <div className="todo-input-container">
+                        <label for="description" className="labels">Descrição (opcional)</label>
+                        <input type="textarea" id="description" className="input" />
+                    </div>
+
+                    <div className="todo-input-container">
+                        <label for="time" className="labels">Hora</label>
+                        <input type="time" className="input" />
+                    </div>
 
                     <div className="btn-td-input">
                         <button className="add-todo-btn">
-                            Adicionar&nbsp;
-                            <FontAwesomeIcon icon={faPlus}/>
-                            </button>
+                            <FontAwesomeIcon icon={faPlus} />
+                        </button>
                     </div>
-                </div>
             </section>
+        </main>
     );
 }
- 
+
 export default TodoInput;

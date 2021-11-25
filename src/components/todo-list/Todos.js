@@ -1,6 +1,7 @@
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import Done from "./Done";
+import Footer from "../calendar/Footer";
 
 let todo1 = {
     "title": "Montar a árvore",
@@ -78,37 +79,40 @@ const doneList = [
 
 const Todos = () => {
     return (
-        <main className="background-todos">
+        <main className="background-img">
+            <div className="todo-background-filter">
 
-        <section className="todo-container">
-            <section className="todo-columns">
-                <nav className="navbar">
-                    <h1 className="site-title">Adicionar tarefa</h1>
-                </nav>
-                <TodoInput/>
-            </section>
+                <section className="todo-container">
+                    <section className="todo-columns">
+                        <nav className="navbar">
+                            <h1 className="site-title">Adicionar tarefa</h1>
+                        </nav>
+                        <TodoInput />
+                    </section>
 
-            <section className="todo-columns">
-                <nav className="navbar">
-                    <h1 className="site-title">Tarefas</h1>
-                </nav>
+                    <section className="todo-columns">
+                        <nav className="navbar">
+                            <h1 className="site-title">Tarefas</h1>
+                        </nav>
 
-                {todoList.map((todo) => {
-                    return <TodoList todo={todo}/>
-                })}
-            </section>
+                        {todoList.map((todo) => {
+                            return <TodoList todo={todo} />
+                        })}
+                    </section>
 
-            <section className="todo-columns">
-                <nav className="navbar">
-                    <h1 className="site-title">Concluídos</h1>
-                </nav>
+                    <section className="todo-columns">
+                        <nav className="navbar">
+                            <h1 className="site-title">Concluídos</h1>
+                        </nav>
 
-                {doneList.map((todo) => {
-                    return <Done todo={todo}/>
-                })}
-            </section>
-        </section>
-    </main>
+                        {doneList.map((todo) => {
+                            return <Done todo={todo} />
+                        })}
+                    </section>
+                </section>
+                <Footer/>
+            </div>
+        </main>
     );
 }
  

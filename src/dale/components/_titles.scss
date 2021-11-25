@@ -4,18 +4,42 @@
     text-align: center;
     font-size: $font-size-xxl;
     letter-spacing: 0.1em;
-    color: $white;
-    text-transform: uppercase;
-    font-family: 'Arvo', 'serif';
-    text-shadow: 1px 1px 2px mix(black, $gray, 6 * 10);
-    margin-top: 80px;
+    margin: $base-margin 0;
+    color: $rosy-brown;
+    font-family: 'Pacifico', cursive;
 }
 
 .subtitle{
     text-transform: uppercase;
-    font-weight: bold;
+    color: $dark-gray;
     font-size: $font-size-xl;
     padding: $base-padding;
     text-align: center;
-    font-family: 'Arvo', 'serif';
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+.intro-title{
+    display: flex;
+    width: 90%;
+    align-items: flex-start;
+    flex-direction: column;
+    color: $dark-gray;
+
+    h1 {
+        margin: $base-margin 0;
+        font-size: $font-size-lg;
+    }
+
+    p{
+        font-size: $base-font-size;
+    }
+}
+
+.site-title {
+    font-family: 'Pacifico', 'cursive';
+    padding-top: $base-padding;
+    padding-bottom: $sm-padding;
+    font-size: $font-size-xl;
+    color: $rosy-brown;
 }

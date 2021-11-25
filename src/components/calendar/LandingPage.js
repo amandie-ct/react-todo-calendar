@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
     return (
-        <main className="background-filter">
+        <main className="background-landing">
             <section className="container">
                 <form className="form-background">
                     <h1 className="subtitle">ToDo App</h1>

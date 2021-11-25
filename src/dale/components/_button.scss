@@ -28,18 +28,7 @@
     box-shadow: $base-box-shadow;
 }
 
-.btn-add{
-    @include btn(transparent);
-    border: none;
-    outline: none;
-    font-size: $font-size-lg;
-    color: mix(white, $gray, 6 * 10);
-    &:hover{
-        color: mix(white, $purple, 5 * 10);
-    }
-}
-
-@mixin todo-button ($bg-color: $blue){
+@mixin todo-button ($bg-color: $dark-green){
     border: none;
     outline: none;
     padding: $sm-padding $base-padding;
@@ -58,14 +47,25 @@
 .del-btn{
     @include btn;
     @include todo-button($del);
+    &:hover{
+        background-color: lighten($color: $del, $amount: 7)
+    }
 }
 
 .check-btn{
     @include btn;
     @include todo-button($green);
+    &:hover{
+        background-color: lighten($color: $green, $amount: 7)
+    }
 }
 
 .add-todo-btn{
     @include btn;
     @include todo-button;
+    padding: $sm-padding * 2 $base-padding;
+
+    &:hover{
+        background-color: lighten($color: $dark-green, $amount: 10)
+    }
 }
