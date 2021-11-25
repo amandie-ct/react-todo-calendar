@@ -37,25 +37,25 @@
 .week{
     display: flex;
     font-size: $base-font-size;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
-    background-color: mix(white, $dark-green, 7 * 10);
-    border-top: 1px dashed mix(white, $gray, 2 * 10);
-    border-bottom: 1px dashed mix(white, $gray, 2 * 10);
+    background-color: mix(white, $dark-green, 3 * 10);
+    border-top: 1px dashed mix(white, $dark-gray, 1 * 10);
+    border-bottom: 1px dashed mix(white, $dark-gray, 1 * 10);
     width: 100%;
     padding: $sm-padding $base-padding;
     box-sizing: border-box;
 }
 
 .day-of-week{
-    font-size: $base-font-size;
+    font-size: $font-size-md;
     font-family: 'Outfit', sans-serif;
-    font-weight: 400;
-    color: $dark-gray;
+    font-weight: 200;
+    color: $white;
 }
 
 .past{
     @extend %day-layout;
-    background-color: mix(white, $rosy-brown, 8 * 10);
-    color: mix(white, $dark-gray, 2 * 10);
+    background-color: mix(white, $rosy-brown, 7 * 10);
+    color: mix(white, $dark-gray, 3 * 10);
 }

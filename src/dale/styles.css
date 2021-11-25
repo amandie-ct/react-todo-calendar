@@ -34,13 +34,13 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
 .row {
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
 }
 
 .gap-0 > * {
@@ -464,30 +464,29 @@ img {
     width: 100%;
   }
 }
-.background-img {
+.background-img-lp, .background-img {
   background-image: url("img/mountaincopy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
   height: auto;
   z-index: -5;
-  padding-top: 2.25rem;
 }
 
-.todo-background-filter {
-  backdrop-filter: blur(4px);
-  height: auto;
-  z-index: -4;
+.background-img {
+  padding-top: 0.75rem;
+}
+
+.background-img-lp {
+  width: 100%;
 }
 
 .background-landing {
-  position: absolute;
-  opacity: 0.8;
-  min-height: 100vh;
+  backdrop-filter: blur(4px);
+  height: 100vh;
   width: 100%;
   z-index: 2;
-  background: #7727ee;
-  background: linear-gradient(112deg, #7727ee 5%, #d99f88 51%, #22e5f4 88%);
+  background: linear-gradient(112deg, rgba(119, 39, 238, 0.5) 5%, rgba(217, 159, 136, 0.5) 51%, rgba(34, 229, 244, 0.5) 88%);
 }
 
 .calendar-background, .form-background, .background-calendar-container {
@@ -501,25 +500,30 @@ img {
 }
 
 .background-calendar-container {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 0.25rem 0.25rem;
   width: 100%;
   border-radius: 5px;
-  margin: 1.5rem 0;
+  backdrop-filter: blur(4px);
 }
 
 .form-background {
-  width: 60vh;
+  width: 45%;
   border-radius: 2%;
   text-align: left;
-  margin-top: 3rem;
-  padding: 3rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+}
+.form-background p {
+  font-size: 1.2rem;
+  color: #3e3e3e;
+  margin-bottom: 0.75rem;
 }
 
 .calendar-background {
   width: 90%;
   margin: 2.25rem 0.75rem;
-  font-family: "Arvo", "serif";
+  padding-bottom: 3rem;
 }
 
 .calendar {
@@ -549,19 +553,18 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  background-color: #e2e2e2;
+  background-color: #224D53;
   font-family: "Poppins", "sans-serif";
-  background: #7727ee;
-  background: linear-gradient(112deg, #7727ee 5%, #d99f88 51%, #22e5f4 88%);
-  padding: 0.75rem;
+  padding: 0.75rem 2.25rem;
   border-radius: 30px;
   outline: none;
   border: none;
   color: #fff;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 2px #333333;
-  width: 100%;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+.btn-form:hover {
+  background-color: #316f77;
 }
 
 .todo-btn {
@@ -638,7 +641,7 @@ img {
   background-color: #316f77;
 }
 
-.navbar .container, .navbar-blue .container, .navbar-purple .container, .navbar-pink .container, .navbar-gray .container, .navbar-black .container, .navbar-white .container, .navbar, .navbar-blue, .navbar-purple, .navbar-pink, .navbar-gray, .navbar-black, .navbar-white {
+.navbar .container, .navbar {
   width: 100%;
   display: flex;
   align-items: center;
@@ -646,33 +649,9 @@ img {
   box-sizing: border-box;
 }
 
-.navbar, .navbar-blue, .navbar-purple, .navbar-pink, .navbar-gray, .navbar-black, .navbar-white {
+.navbar {
   padding: 0 1.5rem;
 }
-.navbar-white {
-  background-color: #fff;
-}
-
-.navbar-black {
-  background-color: #000;
-}
-
-.navbar-gray {
-  background-color: #808080;
-}
-
-.navbar-pink {
-  background-color: #d99f88;
-}
-
-.navbar-purple {
-  background-color: #7727ee;
-}
-
-.navbar-blue {
-  background-color: #22e5f4;
-}
-
 .past, .day {
   display: flex;
   flex-direction: column;
@@ -707,45 +686,43 @@ img {
 .week {
   display: flex;
   font-size: 1rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
-  background-color: #bdcacb;
-  border-top: 1px dashed #999999;
-  border-bottom: 1px dashed #999999;
+  background-color: #648287;
+  border-top: 1px dashed #515151;
+  border-bottom: 1px dashed #515151;
   width: 100%;
   padding: 0.25rem 0.75rem;
   box-sizing: border-box;
 }
 
 .day-of-week {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Outfit", sans-serif;
-  font-weight: 400;
-  color: #3e3e3e;
+  font-weight: 200;
+  color: #fff;
 }
 
 .past {
-  background-color: #f1e9e7;
-  color: #656565;
+  background-color: #eadddb;
+  color: #787878;
 }
 
 .top-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: 0.1em;
   margin: 0.75rem 0;
   color: #BA8F86;
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico", sans-serif;
 }
 
 .subtitle {
-  text-transform: uppercase;
-  color: #3e3e3e;
-  font-size: 2rem;
+  color: #BA8F86;
+  font-size: 3rem;
   padding: 0.75rem;
   text-align: center;
-  font-family: "Outfit", sans-serif;
-  font-weight: 500;
+  font-family: "Pacifico", cursive;
 }
 
 .intro-title {
@@ -760,15 +737,24 @@ img {
   font-size: 1.5rem;
 }
 .intro-title p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .site-title {
   font-family: "Pacifico", "cursive";
   padding-top: 0.75rem;
   padding-bottom: 0.25rem;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #BA8F86;
+}
+
+.month-name {
+  color: #224D53;
+  font-size: 2rem;
+  padding: 0.75rem;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  text-transform: capitalize;
 }
 
 .footer {
@@ -778,8 +764,14 @@ img {
   justify-content: center;
   align-items: center;
   background: linear-gradient(112deg, rgba(119, 39, 238, 0.5) 5%, rgba(217, 159, 136, 0.5) 51%, rgba(34, 229, 244, 0.5) 88%);
-  color: #fff;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+.footer p {
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  font-weight: 200;
+  font-size: 1.2rem;
 }
 .footer .footer-links {
   font-size: 2rem;
@@ -789,6 +781,9 @@ img {
 }
 .footer .footer-links a {
   padding: 0 0.75rem;
+}
+.footer .footer-links:hover {
+  color: #BA8F86;
 }
 
 .input {
@@ -802,11 +797,15 @@ img {
   font-size: 1rem;
   color: #4d4d4d;
   font-family: "Poppins", "sans-serif";
+  width: 90%;
 }
 
 .labels {
   font-weight: bold;
   margin-top: 0.75rem;
+  text-align: start;
+  font-size: 1.2rem;
+  width: 100%;
 }
 
 .todo, .todo-input-background {
@@ -818,7 +817,7 @@ img {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.9);
-  margin: 0.75rem 0.75rem;
+  margin: 0.75rem 1.5rem;
 }
 
 .todo-input-background .todo-input-container {
@@ -839,21 +838,23 @@ img {
 .todo-columns {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.4);
+  width: 31%;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   margin: 1.5rem 0;
+  padding-bottom: 1.5rem;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 .todo h2 {
   padding-top: 0.75rem;
   padding-bottom: 0.25rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .todo p {
-  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
   font-size: 1rem;
 }
 
@@ -876,9 +877,8 @@ img {
   color: #17130a;
 }
 .done-title h2 {
-  padding-top: 0.75rem;
   padding-bottom: 0.25rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .done-title p {
   padding-top: 0.75rem;

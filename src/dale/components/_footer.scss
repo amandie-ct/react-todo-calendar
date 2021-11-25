@@ -5,8 +5,17 @@
    justify-content: center;
    align-items: center;
    background: $gradient-light;
-   color: $white;
    box-shadow: $base-box-shadow;
+   backdrop-filter: blur(4px);
+
+   p{
+      font-family: 'Outfit', sans-serif;
+      color: $white;
+      font-weight: 200;
+      font-size: $font-size-md;
+
+   }
+
 
    .footer-links{
       font-size: $font-size-xl;
@@ -16,6 +25,10 @@
 
       a{
          padding: 0 $base-padding;
+      }
+
+      &:hover{
+         color: $rosy-brown;
       }
    }
 }

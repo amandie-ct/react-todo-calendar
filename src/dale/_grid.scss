@@ -17,14 +17,13 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    // padding: 0 10px;
+    padding: 0 10px;
     box-sizing: border-box;
 }
 
 .row {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
 }
 
 // grid gaps

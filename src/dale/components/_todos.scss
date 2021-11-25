@@ -9,7 +9,7 @@
     box-shadow: $base-box-shadow;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.9);
-    margin: $base-margin $base-margin;
+    margin: $base-margin $base-margin * 2;
 }
 
 .todo-input-background{
@@ -36,12 +36,14 @@
 .todo-columns{
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.4);
+    width: 31%;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     margin: $base-margin * 2 0;
+    padding-bottom: $base-padding * 2;
     box-shadow: $base-box-shadow;
+    backdrop-filter: blur(4px);
 }
 
 .todo {
@@ -49,12 +51,12 @@
     
     h2 {
         padding-top: $base-padding;
-        padding-bottom: $sm-padding;
-        font-size: $font-size-lg;
+        padding-bottom: $sm-padding;    
+        font-size: $font-size-mmd;
     }
 
     p {
-        padding-bottom: $sm-padding;
+        padding-top: $sm-padding;
         font-size: $base-font-size;
     }
 
@@ -82,9 +84,9 @@
     color: mix($black, $olive, 7 * 10);
 
     h2 {
-        padding-top: $base-padding;
         padding-bottom: $sm-padding;
-        font-size: $font-size-lg;
+        font-size: $font-size-mmd;
+
     }
 
     p {

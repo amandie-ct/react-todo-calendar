@@ -23,7 +23,7 @@ const Calendar = () => {
     return ( 
         <main className="calendar-background">
 
-            <h2 className="subtitle text-gray-dark-6">
+            <h2 className="month-name">
                 {monthName}
             </h2>
 
@@ -35,7 +35,7 @@ const Calendar = () => {
                         {week.map((day) => {
 
                             return <div className={day.isBefore(today) ? "past" : "day"}>
-                                <h1 className="day-title text-gray-dark-6">{day.format("D")}</h1>
+                                <h1 className="day-title">{day.format("D")}</h1>
                             </div>
                         })}
                     </div>

@@ -2,21 +2,19 @@
 
 .top-title{
     text-align: center;
-    font-size: $font-size-xxl;
+    font-size: $font-size-4l;
     letter-spacing: 0.1em;
     margin: $base-margin 0;
     color: $rosy-brown;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', sans-serif;
 }
 
 .subtitle{
-    text-transform: uppercase;
-    color: $dark-gray;
-    font-size: $font-size-xl;
+    color: $rosy-brown; 
+    font-size: $font-size-xxl;
     padding: $base-padding;
     text-align: center;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
+    font-family: 'Pacifico', cursive;
 }
 
 .intro-title{
@@ -32,7 +30,7 @@
     }
 
     p{
-        font-size: $base-font-size;
+        font-size: $font-size-md;
     }
 }
 
@@ -40,6 +38,15 @@
     font-family: 'Pacifico', 'cursive';
     padding-top: $base-padding;
     padding-bottom: $sm-padding;
-    font-size: $font-size-xl;
+    font-size: $font-size-xxl;
     color: $rosy-brown;
+}
+
+.month-name{
+    color: $dark-green; 
+    font-size: $font-size-xl;
+    padding: $base-padding;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    text-transform: capitalize;
 }

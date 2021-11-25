@@ -10,7 +10,7 @@ const MainCalendar = () => {
                     <div className="background-calendar-container">
 
                         <header className="background-title">
-                            <h1 className="top-title">Gerenciador de tarefas</h1>
+                            <h1 className="top-title">ToDo App</h1>
                         </header>
 
                         <div className="intro-title">
