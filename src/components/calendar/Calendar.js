@@ -34,7 +34,8 @@ const Calendar = () => {
                     return <div className="row">
                         {week.map((day) => {
 
-                            return <div className={day.isBefore(today) ? "past" : "day"}>
+                            return <div className={day.isSame(today, "day") ? "selected" : "day"}
+                            onClick={() => setToday(day)}>
                                 <h1 className="day-title">{day.format("D")}</h1>
                             </div>
                         })}

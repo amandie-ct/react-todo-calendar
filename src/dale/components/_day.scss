@@ -54,8 +54,8 @@
     color: $white;
 }
 
-.past{
+.selected{
     @extend %day-layout;
-    background-color: mix(white, $rosy-brown, 7 * 10);
-    color: mix(white, $dark-gray, 3 * 10);
+    background-color: mix(white, $rosy-brown, 5 * 10);
+    color: $dark-gray;
 }

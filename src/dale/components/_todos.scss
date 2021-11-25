@@ -38,7 +38,7 @@
     flex-direction: column;
     width: 31%;
     height: fit-content;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
     margin: $base-margin * 2 0;
     padding-bottom: $base-padding * 2;
@@ -81,21 +81,24 @@
     @extend %btn-container;
     align-items: center;
     justify-content: space-between;
-    color: mix($black, $olive, 7 * 10);
+    margin-bottom: $sm-padding; 
 
     h2 {
-        padding-bottom: $sm-padding;
+        padding-top: 0;
+        padding-bottom: 0;
         font-size: $font-size-mmd;
+        color: $dark-gray;
 
     }
 
+}
+
+.done{
+    background-color: mix(white, $checked, 1 * 10);
     p {
+        color: mix($white, $dark-gray, 1 * 10);
         padding-top: $base-padding;
         padding-bottom: $sm-padding;
         font-size: $base-font-size;
     }
-}
-
-.done{
-    background-color: mix(white, $rosy-brown, 3 * 10);
 }

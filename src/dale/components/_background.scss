@@ -38,12 +38,12 @@
 
 .background-calendar-container{
   @extend %mould;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: $sm-padding $sm-padding;
   width: 100%;
   border-radius: 5px;
   backdrop-filter: blur(4px);
-
+  margin-bottom: 30px;
 }
 
 .form-background {
@@ -52,13 +52,17 @@
   border-radius: 2%;
   text-align: left;
   margin: 0 auto;
-  padding: $base-padding * 2 $base-padding * 2; 
+  padding: $base-padding * 2 $base-padding; 
 
   p{
     font-size: $font-size-md;
     color: $dark-gray;
     margin-bottom: $base-margin;
   }
+}
+
+.form-c{
+  padding-top: 60px;
 }
 
 .calendar-background {

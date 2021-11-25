@@ -9,6 +9,7 @@ const Done = ({todo}) => {
                     <h2>{todo.title}</h2>
                     <h2><FontAwesomeIcon icon={faCheck}/></h2>
                 </div>
+                <hr/>
                 <p>{todo.time}</p>
                 <p>{todo.description}</p>
             </div>

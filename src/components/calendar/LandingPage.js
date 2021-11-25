@@ -7,7 +7,7 @@ const LandingPage = () => {
     return (
         <div className="background-img-lp">
             <main className="background-landing">
-                <section className="container">
+                <section className="container form-c">
                     <form className="form-background">
                         <h1 className="subtitle">ToDo App</h1>
                         <p className="">Para começar, insira suas informações abaixo:</p>

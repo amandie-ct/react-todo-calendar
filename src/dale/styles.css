@@ -500,11 +500,12 @@ img {
 }
 
 .background-calendar-container {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 0.25rem 0.25rem;
   width: 100%;
   border-radius: 5px;
   backdrop-filter: blur(4px);
+  margin-bottom: 30px;
 }
 
 .form-background {
@@ -512,12 +513,16 @@ img {
   border-radius: 2%;
   text-align: left;
   margin: 0 auto;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 0.75rem;
 }
 .form-background p {
   font-size: 1.2rem;
   color: #3e3e3e;
   margin-bottom: 0.75rem;
+}
+
+.form-c {
+  padding-top: 60px;
 }
 
 .calendar-background {
@@ -652,7 +657,7 @@ img {
 .navbar {
   padding: 0 1.5rem;
 }
-.past, .day {
+.selected, .day {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -703,9 +708,9 @@ img {
   color: #fff;
 }
 
-.past {
-  background-color: #eadddb;
-  color: #787878;
+.selected {
+  background-color: #ddc7c3;
+  color: #3e3e3e;
 }
 
 .top-title {
@@ -797,7 +802,7 @@ img {
   font-size: 1rem;
   color: #4d4d4d;
   font-family: "Poppins", "sans-serif";
-  width: 90%;
+  width: 80%;
 }
 
 .labels {
@@ -805,7 +810,7 @@ img {
   margin-top: 0.75rem;
   text-align: start;
   font-size: 1.2rem;
-  width: 100%;
+  width: 80%;
 }
 
 .todo, .todo-input-background {
@@ -840,7 +845,7 @@ img {
   flex-direction: column;
   width: 31%;
   height: fit-content;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   margin: 1.5rem 0;
   padding-bottom: 1.5rem;
@@ -874,20 +879,23 @@ img {
 .done-title {
   align-items: center;
   justify-content: space-between;
-  color: #17130a;
+  margin-bottom: 0.25rem;
 }
 .done-title h2 {
-  padding-bottom: 0.25rem;
+  padding-top: 0;
+  padding-bottom: 0;
   font-size: 1.3rem;
-}
-.done-title p {
-  padding-top: 0.75rem;
-  padding-bottom: 0.25rem;
-  font-size: 1rem;
+  color: #3e3e3e;
 }
 
 .done {
-  background-color: #cfb1aa;
+  background-color: #d8ffba;
+}
+.done p {
+  color: #515151;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
