@@ -8,20 +8,40 @@
     box-shadow: $base-box-shadow;
     border-radius: none;
     min-width: 12%;
-    padding: $base-padding * 2 $base-padding;
+    padding: $sm-padding * 7 $base-padding;
     font-family: 'Outfit', sans-serif;
+    color: $dark-gray;
 }
 
 .day{
     @extend %day-layout;
     background-color: $white;
-    color: $dark-gray;
-
 
     &:hover{
         background-color: mix(white, $dark-green, 7 * 10);
         cursor: pointer;
     }
+}
+
+.selected{
+    @extend %day-layout;
+    background-color: mix(white, $rosy-brown, 5 * 10);
+}
+
+.today{
+    @extend %day-layout;
+    background-color: mix(white, $ciano, 5 * 10);
+    &:hover{
+        background-color: mix(white, $dark-green, 7 * 10);
+        cursor: pointer;
+    }
+}
+
+.before {
+    @extend %day-layout;
+    background-color: mix(white, $rosy-brown, 9 * 10);
+    color: mix(white, $dark-gray, 6 * 10);
+
 }
 
 .day-title{
@@ -54,8 +74,25 @@
     color: $white;
 }
 
-.selected{
-    @extend %day-layout;
-    background-color: mix(white, $rosy-brown, 5 * 10);
-    color: $dark-gray;
+.calendar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+        color: $dark-green; 
+        font-size: $font-size-lg;
+        padding: $sm-padding * 3 $base-padding * 2;
+        text-align: center;
+        font-family: 'Outfit', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .chevron{
+        cursor: pointer;
+        &:hover{
+            color:lighten($dark-green, 12%)
+        }
+    }
 }

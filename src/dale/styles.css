@@ -502,7 +502,6 @@ img {
 .background-calendar-container {
   background-color: rgba(255, 255, 255, 0.4);
   padding: 0.25rem 0.25rem;
-  width: 100%;
   border-radius: 5px;
   backdrop-filter: blur(4px);
   margin-bottom: 30px;
@@ -528,7 +527,6 @@ img {
 .calendar-background {
   width: 90%;
   margin: 2.25rem 0.75rem;
-  padding-bottom: 3rem;
 }
 
 .calendar {
@@ -657,7 +655,7 @@ img {
 .navbar {
   padding: 0 1.5rem;
 }
-.selected, .day {
+.before, .today, .selected, .day {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -665,17 +663,34 @@ img {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
   border-radius: none;
   min-width: 12%;
-  padding: 1.5rem 0.75rem;
+  padding: 1.75rem 0.75rem;
   font-family: "Outfit", sans-serif;
+  color: #3e3e3e;
 }
 
 .day {
   background-color: #fff;
-  color: #3e3e3e;
 }
 .day:hover {
   background-color: #bdcacb;
   cursor: pointer;
+}
+
+.selected {
+  background-color: #ddc7c3;
+}
+
+.today {
+  background-color: #b9dfea;
+}
+.today:hover {
+  background-color: #bdcacb;
+  cursor: pointer;
+}
+
+.before {
+  background-color: #f8f4f3;
+  color: #b2b2b2;
 }
 
 .day-title {
@@ -708,9 +723,25 @@ img {
   color: #fff;
 }
 
-.selected {
-  background-color: #ddc7c3;
-  color: #3e3e3e;
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.calendar-header h2 {
+  color: #224D53;
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  text-transform: uppercase;
+}
+.calendar-header .chevron {
+  cursor: pointer;
+}
+.calendar-header .chevron:hover {
+  color: #34757e;
 }
 
 .top-title {
@@ -751,15 +782,6 @@ img {
   padding-bottom: 0.25rem;
   font-size: 3rem;
   color: #BA8F86;
-}
-
-.month-name {
-  color: #224D53;
-  font-size: 2rem;
-  padding: 0.75rem;
-  text-align: center;
-  font-family: "Outfit", sans-serif;
-  text-transform: capitalize;
 }
 
 .footer {
