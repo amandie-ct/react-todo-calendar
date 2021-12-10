@@ -4,6 +4,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const TodoList = ({todo}) => {
 
+    
 
     return (
         <section>
