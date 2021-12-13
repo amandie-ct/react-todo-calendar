@@ -6,13 +6,8 @@ import Footer from "../calendar/Footer";
 
 const Todos = () => {
 
-    let todo = {
-        "title": title,
-        "description": description,
-        "time": time,
-        "isDone": isDone
-    }
-
+    let todoList = null;
+    let doneList = null;
     return (
         <main className="background-img">
             <div className="todo-background-filter">
@@ -22,11 +17,7 @@ const Todos = () => {
                         <nav className="navbar">
                             <h1 className="site-title">Adicionar tarefa</h1>
                         </nav>
-                        <TodoInput 
-                        todo={todo}
-                        title={title}
-                        description={description}
-                        time={time}/>
+                        <TodoInput/>
                     </section>
 
                     <section className="todo-columns">
@@ -34,7 +25,7 @@ const Todos = () => {
                             <h1 className="site-title">Tarefas</h1>
                         </nav>
 
-                        {todoList.map((todo) => {
+                        {todoList && todoList.map((todo) => {
                             return <TodoList todo={todo} />
                         })}
                     </section>
@@ -44,7 +35,7 @@ const Todos = () => {
                             <h1 className="site-title">Concluídos</h1>
                         </nav>
 
-                        {doneList.map((todo) => {
+                        {doneList && doneList.map((todo) => {
                             return <Done todo={todo} />
                         })}
                     </section>
