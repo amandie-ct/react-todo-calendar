@@ -4,27 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
 
 
-const TodoInput = () => {
+const TodoInput = ({addTodo}) => {
 
     const [title, setTitle] = useState();
     const [description, setDescription] = useState();
     const [time, setTime] = useState();
     const [todosList, setTodosList] = useState();
     const todosEndpoint = '/todos/pending';
-
-    const addTodo = (title, description, time) => {
-        fetch('http://localhost:3001/todos/new', {
-            method: 'post',
-            body: {
-                title,
-                description,
-                time
-            }
-        })
-        .then(data => {
-            
-        })
-    }
 
     return (
         <main>
