@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-const TodoList = ({todo, removeTodo, setToDone, i}) => {
+const TodoList = ({todo, removeTodo, setToDone, index}) => {
 
     return (
         <section>
@@ -14,11 +14,11 @@ const TodoList = ({todo, removeTodo, setToDone, i}) => {
 
                 <div className="btn-td">
                     <button className="del-btn"
-                    onClick={() => removeTodo(i)}>
+                    onClick={() => removeTodo(index)}>
                         <FontAwesomeIcon icon={faTrashAlt}/>
                     </button>
                     <button className="check-btn"
-                    onClick={() => setToDone(i)}>
+                    onClick={() => setToDone(index)}>
                         <FontAwesomeIcon icon={faCheck}/>
                     </button>
                 </div>

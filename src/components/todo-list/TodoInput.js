@@ -1,5 +1,4 @@
-import TodoList from "./TodoList";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+    import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
 
@@ -9,8 +8,6 @@ const TodoInput = ({addTodo}) => {
     const [title, setTitle] = useState();
     const [description, setDescription] = useState();
     const [time, setTime] = useState();
-    const [todosList, setTodosList] = useState();
-    const todosEndpoint = '/todos/pending';
 
     return (
         <main>

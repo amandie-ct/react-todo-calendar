@@ -3,7 +3,7 @@ import TodoList from "./TodoList";
 import Done from "./Done";
 import Footer from "../calendar/Footer";
 import { useState } from "react";
-import { faForumbee } from "@fortawesome/free-brands-svg-icons";
+// import { faForumbee } from "@fortawesome/free-brands-svg-icons";
 
 
 const Todos = () => {
@@ -41,8 +41,8 @@ const Todos = () => {
     }
 
     const removeTodo = (id) => {
-        fetch(`${removeTodoURL}/delete/${id}`, {
-        })
+        fetch(`${removeTodoURL}/${id}`, {
+        method: 'delete'})
         .then(res => {
             if (!res.ok){
                 throw Error('Não foi possível encontrar o conteúdo')
@@ -93,9 +93,9 @@ const Todos = () => {
                             <h1 className="site-title">Tarefas</h1>
                         </nav>
 
-                        { todoList? todoList.map((todo, id) => {
+                        { todoList? todoList.map((todo, index) => {
                             return <TodoList todo={todo} removeTodo={removeTodo}
-                            setToDone={setToDone} i={id}/>
+                            setToDone={setToDone} key={index} index={index}/>
                         }) : '' }
                     </section>
 
@@ -104,8 +104,8 @@ const Todos = () => {
                             <h1 className="site-title">Concluídos</h1>
                         </nav>
 
-                        { doneList? doneList.map((todo, id) => {
-                            return <Done todo={todo} />
+                        { doneList? doneList.map((todo, index) => {
+                            return <Done todo={todo} key={index}/>
                         }) : '' }
                     </section>
                 </section>

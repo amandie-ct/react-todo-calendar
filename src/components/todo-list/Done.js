@@ -1,13 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-const Done = () => {
+const Done = ({todo}) => {
 
-let todo = {
-    title: 'brincar com angelinda',
-    description: 'de noite',
-    time: '12:00'
-}
     return (
         <section>
             <div className="todo done">
